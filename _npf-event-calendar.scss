@@ -3,19 +3,41 @@
 
   .event-container {
     @include zen-grid-container();
-    // $zen-columns:7;
+    $zen-columns:7;
     $zen-gutter-width:0;
+
+    border:3px solid white;
+
+    &:hover {
+      // box-shadow: inset 0px 0px 10px 5px rgba(98,181,229, 0.5);
+      border: 3px solid $color-light-blue;
+      background-color: rgba(98,181,229, 0.1);
+    }
 
     .event-left {
       @include zen-grid-item(1, 1);
+      margin-top: 2%;
     }
 
     .event-middle {
       @include zen-grid-item(3, 2);
+      margin-left: 15%;
+      p{
+        font-size:$base-font-size;
+      }
     }
 
     .event-right {
       @include zen-grid-item(2, 4);
+      margin-top: 2%;
+
+      img {
+        border: 3px solid $color-light-blue;
+
+        &:hover {
+          border: 3px solid $color-orange;
+        }
+      }
     }
   }
 }
