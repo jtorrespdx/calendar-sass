@@ -1,0 +1,21 @@
+// Main Calendar
+.npf-event-calendar {
+
+  .event-container {
+    @include zen-grid-container();
+    // $zen-columns:7;
+    $zen-gutter-width:0;
+
+    .event-left {
+      @include zen-grid-item(1, 1);
+    }
+
+    .event-middle {
+      @include zen-grid-item(3, 2);
+    }
+
+    .event-right {
+      @include zen-grid-item(2, 4);
+    }
+  }
+}
