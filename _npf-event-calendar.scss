@@ -1,10 +1,17 @@
 // Main Calendar
+
+// @import "zen/background";
+// @include zen-grid-background($zen-column-count, $zen-gutter-width);
+// $display-zen-grid-background: true;
+
 .npf-event-calendar {
 
   .event-container {
+    // background-color:grey;
     @include zen-grid-container();
-    $zen-columns:7;
-    $zen-gutter-width:0;
+    @import "zen/background";
+    $zen-column-count:7;
+    $zen-gutter-width:10px;
 
     border:3px solid white;
 
@@ -17,27 +24,40 @@
     .event-left {
       @include zen-grid-item(1, 1);
       margin-top: 2%;
+      // background-color:purple;
     }
 
     .event-middle {
-      @include zen-grid-item(3, 2);
+      @include zen-grid-item(4, 2);
       margin-left: 15%;
+      // background-color:yellow;
       p{
         font-size:$base-font-size;
       }
     }
 
     .event-right {
-      @include zen-grid-item(2, 4);
+      @include zen-grid-item(2, 6);
       margin-top: 2%;
+      // background-color:salmon;
+
 
       img {
         border: 3px solid $color-light-blue;
+        width: 90%;
+
 
         &:hover {
           border: 3px solid $color-orange;
         }
       }
+    }
+
+  }
+  // Pager styles
+  .pager {
+    a {
+      border:0px solid #fff;
     }
   }
 }
