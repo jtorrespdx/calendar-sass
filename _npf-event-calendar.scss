@@ -4,7 +4,26 @@
 // @include zen-grid-background($zen-column-count, $zen-gutter-width);
 // $display-zen-grid-background: true;
 
+
+
 .npf-event-calendar {
+
+  .views-exposed-form {
+    margin-left: 2%;
+  }
+  #edit-field-geofield-distance-unit {
+    display: none;
+  }
+  #edit-field-geofield-distance-distance  {
+    // background-color: red;
+    width: 60px;
+  }
+  #edit-field-geofield-distance-origin {
+    width: 80px;
+  }
+  #edit-submit-events-calendar {
+    margin-top: 0;
+  }
 
   .event-container {
     // background-color:grey;
