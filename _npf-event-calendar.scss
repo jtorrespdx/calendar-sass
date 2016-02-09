@@ -38,7 +38,12 @@
     input[type="text"] {
       border:2px solid $color-grey;
       border-radius:4px;
-      width:70px;
+      width:72px;
+
+      @media (max-width: $size-mobile-menu) {
+        height: 45px;
+        font-size: $base-font-size;
+      }
     }
 
     span {
@@ -47,6 +52,10 @@
       margin-left: -6%;
       padding:5px;
       display:inline-block;
+
+      @media (max-width: $size-mobile-menu) {
+        padding-top:1em;
+      }
     }
 
     #edit-field-geofield-distance-unit {
@@ -108,61 +117,87 @@
   // }
 
   /////MAIN CONTENT//////
+  .calendar-desktop {
+    @media (max-width: $size-mobile-menu) {
+      display:none;
+    }
   //Event styling wrapper:
-  .event-container {
-    @include zen-grid-container();
-    @import "zen/background";
-    $zen-column-count:7;
-    $zen-gutter-width:10px;
 
-    border:1px solid white;
-    margin-bottom:10px;
+    .event-container {
+      @include zen-grid-container();
+      @import "zen/background";
+      $zen-column-count:7;
+      $zen-gutter-width:10px;
 
-      &:hover {
-        border:1px solid $color-medium-blue;
-        @include box-shadow(0, 3px, 5px, $color-medium-blue);
-        background-color: rgba(98,181,229, 0.1);
-      }
-
-    .event-left {
-      @include zen-grid-item(1, 1);
-      margin-top: 2%;
-    }
-
-    .event-middle {
-      @include zen-grid-item(4, 2);
-      margin-left: 15%;
-      margin-top:-2%;
-      padding-right:10px;
-      p{
-        font-size:$base-font-size;
-      }
-    }
-
-    .event-right {
-      @include zen-grid-item(2, 6);
-      margin-top: 2%;
-
-      img {
-        border: 2px solid $color-medium-blue;
-        width: 90%;
-
+      border:1px solid white;
+      margin-bottom:10px;
 
         &:hover {
-          border: 2px solid $color-orange;
+          border:1px solid $color-medium-blue;
+          @include box-shadow(0, 3px, 5px, $color-medium-blue);
+          background-color: rgba(98,181,229, 0.1);
+        }
+
+      .event-left {
+        @include zen-grid-item(1, 1);
+        margin-top: 2%;
+      }
+
+      .event-middle {
+        @include zen-grid-item(4, 2);
+        margin-left: 15%;
+        margin-top:-2%;
+        padding-right:10px;
+        p{
+          font-size:$base-font-size;
         }
       }
+
+      .event-right {
+        @include zen-grid-item(2, 6);
+        margin-top: 2%;
+
+        img {
+          border: 2px solid $color-medium-blue;
+          width: 90%;
+
+
+          &:hover {
+            border: 2px solid $color-orange;
+          }
+        }
+      }
+
+    }
+    %pager__item {
+
+      padding: 11px 0px;
+      border: none;
+    }
+    .pager-current {
+      padding-right: 12px;
+      padding-left: 12px;
+      border: 1px solid #ddd;
+    }
+  }
+}
+
+.calendar-mobile {
+  @media (min-width: $size-mobile-menu) {
+    display:none;
+  }
+
+  .event-mobile-container {
+    @include zen-grid-container();
+    $zen-column-count:4;
+    $zen-gutter-width:5px;
+
+    .mobile-left {
+      @include zen-grid-item(1,1);
     }
 
-  }
-  %pager__item {
-
-    padding: 11px 0px;
-    border: none;
-  }
-  .pager-current {
-    padding-right: 12px;
-    padding-left: 12px;
-    border: 1px solid #ddd;
+    .mobile-right {
+      @include zen-grid-item(3,2);
+    }
   }
 }
