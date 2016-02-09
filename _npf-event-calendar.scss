@@ -12,45 +12,102 @@
       color:$color-text-main;
     }
   }
+    //
+    // input[type="text"] {
+    //   border:2px solid $color-grey;
+    //   border-radius:4px;
+    // }
+
+  //////////BANNER///////////
+  // Filter form wrapper:
+  .views-exposed-widgets {
+    background: url(#{$alternative-background}) 0 0 no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    padding: 150px 0px 10px;
+
+    .views-exposed-widget {
+      padding:0;
+    }
+
+    #edit-field-geofield-distance-wrapper {
+      padding-left:1.5em;
+    }
 
     input[type="text"] {
       border:2px solid $color-grey;
       border-radius:4px;
+      width:70px;
     }
-
-  // Filter form wrapper:
-  .views-exposed-widgets {
-    background: url(#{$alternative-background}) 0 0 no-repeat;
-
-    background-size: cover;
-    box-sizing: border-box;
-    margin-bottom: 0px;
-    padding: 90px 0px 10px;
 
     span {
       color:white;
       font-weight:bold;
+      margin-left: -6%;
+      padding:5px;
+      display:inline-block;
+    }
+
+    #edit-field-geofield-distance-unit {
+      display: none;
+    }
+
+    .form-submit {
+      margin-top:0;
+      text-transform:uppercase;
+      font-weight:bold;
     }
   }
+  // #edit-field-geofield-distance-wrapper {
+  //   // background-color: grey;
+  //   width: 100%;
+  //   text-align: center;
+  //   // margin-bottom: -1%;
+  //   margin: auto;
+  //   float: none;
+  // }
+  // .views-widget {
+  //   // background-color: red;
+  //   display: inline-block;
+  //   // margin-right: 6px;
+  //   margin: auto;
+  //   width: 100%;
+  // }
+  // .geofield-proximity-field-wrapper {
+  //   margin: auto;
+  //   width: 50%;
+  // }
+  // .form-type-geofield-proximity {
+  //   margin: auto;
+  //   width: 100%;
+  // }
+  // #edit-field-geofield-distance-distance  {
+  //   margin:auto;
+  // }
+  // #edit-field-geofield-distance-origin {
+  //   width: 80px;
+  // }
+  // .views-submit-button {
+  // // background-color: pink;
+  // }
+  // #edit-submit-events-calendar {
+  //   margin-top: -1%;
+  //   padding: 10px 16px 10px 16px;
+  //   // width: 20%;
+  //   text-align: center;
+  //   text-transform:uppercase;
+  //   font-weight:bold;
+  //   display: inline-block;
+  // }
+  // .form-item-field-geofield-distance-origin {
+  //   display:inline-block;
+  // }
+  // .geofield-proximity-origin {
+  //   margin:auto;
+  // }
 
-  #edit-field-geofield-distance {
-    width:50%;
-    margin: 0 auto;
-  }
-  #edit-field-geofield-distance-unit {
-    display: none;
-  }
-  #edit-field-geofield-distance-distance  {
-    // background-color: red;
-    width: 60px;
-  }
-  #edit-field-geofield-distance-origin {
-    width: 80px;
-  }
-  #edit-submit-events-calendar {
-    margin-top: 0;
-  }
-
+  /////MAIN CONTENT//////
   //Event styling wrapper:
   .event-container {
     @include zen-grid-container();
