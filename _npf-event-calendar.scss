@@ -102,10 +102,14 @@
       .event-middle {
         @include zen-grid-item(4, 2);
         margin-left: 15%;
-        margin-top:-2%;
+        margin-top: 0px;
+        padding-top: .7em;
         padding-right:10px;
         p{
           font-size:$base-font-size;
+        }
+        h2{
+          margin-top: 0px;
         }
       }
 
