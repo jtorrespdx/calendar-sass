@@ -152,12 +152,24 @@
     $zen-column-count:4;
     $zen-gutter-width:5px;
 
-    .mobile-left {
-      @include zen-grid-item(1,1);
+    .mobile-logo {
+      @include zen-grid-item(1,4);
+
+      img {
+        padding-top:2.5em;
+      }
     }
 
-    .mobile-right {
-      @include zen-grid-item(3,2);
+    .mobile-event-content {
+      @include zen-grid-item(4,1);
+
+      a.map-button {
+        width:50%;
+      }
+
+      a.learn-more-button {
+        width:100%;
+      }
     }
   }
 }
