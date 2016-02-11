@@ -1,0 +1,47 @@
+// Home Page Calendar Feed SCSS
+
+// Main view wrapper:
+.homepage-calendar-feed {
+  margin-bottom: 0.5em;
+
+  h4, p, address, a {
+    color: $color-text-main;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+
+    &:hover {
+      color:$color-text-main;
+    }
+  }
+
+  .homepage-calendar-feed-container {
+    @include zen-grid-container();
+    $zen-column-count:6;
+    $zen-gutter-width: 2px;
+
+
+    &:hover {
+      background-color: rgba(98,181,229, 0.1);
+    }
+
+    &:nth-child(odd) {
+        // border-top:1px solid $color-light-grey;
+        border-bottom: 1px solid $color-light-grey;
+      }
+    }
+
+    .homepage-calendar-feed-title {
+      @include zen-grid-item(5,1);
+      text-transform:uppercase;
+      font-weight:bold;
+    }
+
+
+    .homepage-calendar-feed-date {
+      @include zen-grid-item(1,4);
+      padding-top:.5em;
+      text-transform:uppercase;
+      font-weight:bold;
+  }
+}
