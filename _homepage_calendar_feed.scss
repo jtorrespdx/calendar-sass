@@ -17,12 +17,11 @@
 
   .homepage-calendar-feed-container {
     @include zen-grid-container();
-    $zen-column-count:6;
+    $zen-column-count:4;
     $zen-gutter-width: 2px;
 
-
     &:hover {
-      background-color: rgba(98,181,229, 0.1);
+      background-color: rgba(98,181,229, 0.2);
     }
 
     &:nth-child(odd) {
@@ -31,17 +30,33 @@
       }
     }
 
-    .homepage-calendar-feed-title {
-      @include zen-grid-item(5,1);
-      text-transform:uppercase;
+    .homepage-calendar-feed-title-loc {
+      @include zen-grid-item(3,1);      // text-transform:uppercase;
       font-weight:bold;
-    }
+      line-height:1em;
 
+      span {
+        color:$color-dark-blue;
+      }
+
+      .event-title {
+        display:-webkit-box;
+        -webkit-line-clamp:1;
+        -webkit-box-orient:vertical;
+        overflow:hidden;
+      }
+
+      .event-loc {
+        padding-top:.5em;
+        padding-bottom:.5em;
+      }
+    }
 
     .homepage-calendar-feed-date {
       @include zen-grid-item(1,4);
       padding-top:.5em;
       text-transform:uppercase;
       font-weight:bold;
+      text-align:right;
   }
 }
