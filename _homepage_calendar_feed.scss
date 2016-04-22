@@ -4,8 +4,8 @@
 .homepage-calendar-feed {
   margin-bottom: 0.5em;
 
-  h4, p, address, a {
-    color: $color-text-main;
+  h4, p, address, a, span {
+    color: $color-text-main !important;
     font-style: normal;
     font-weight: normal;
     text-decoration: none;
@@ -37,6 +37,7 @@
 
       span {
         color:$color-dark-blue;
+        font-size: 22px;
       }
 
       .event-title {
