@@ -1,5 +1,7 @@
 // Main Calendar SCSS
 
+///SEARCH FUNCTIONALITY: Once the radius search is fixed, delete 3 lines of code noted below in the BANNER section beginning with #events-calendar-banner-header.
+
 // Main view wrapper:
 .npf-event-calendar {
 
@@ -35,13 +37,20 @@
       font-size: 6em;
       margin: auto;
       text-align: center;
+      padding-bottom: .2em; //Delete this line once search is fixed. See 2 more lines to delete below in #edit-field-geofield-distance-wrapper.
     }
 
     #edit-field-geofield-distance-wrapper {
       padding-left:1.5em;
+      display: none; //Delete this line once search is fixed. 1 more line to delete  below under #edit-submit-events-calendar.
+    }
+
+    #edit-submit-events-calendar {
+        display: none; //Delete this line once search is fixed. No more lines below to delete.
     }
 
     input[type="text"], select {
+
       border:2px solid $color-grey;
       border-radius:4px;
       width:200px;
@@ -93,14 +102,12 @@
       @import "zen/background";
       $zen-column-count:7;
       $zen-gutter-width:10px;
-      // transition: border .2s ease-in-out;
       transition: background-color .2s ease-in-out;
       border:3px solid white;
       margin-bottom:10px;
 
         &:hover {
           border:3px solid $color-medium-blue;
-          // @include box-shadow(0, 3px, 5px, $color-medium-blue);
           background-color: rgba(98,181,229, 0.1);
         }
 
