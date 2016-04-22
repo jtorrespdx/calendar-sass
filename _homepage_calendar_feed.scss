@@ -25,13 +25,12 @@
     }
 
     &:nth-child(odd) {
-        // border-top:1px solid $color-light-grey;
         border-bottom: 1px solid $color-light-grey;
       }
     }
 
     .homepage-calendar-feed-title-loc {
-      @include zen-grid-item(3,1);      // text-transform:uppercase;
+      @include zen-grid-item(3,1);
       font-weight:bold;
       line-height:1em;
 
