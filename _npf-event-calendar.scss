@@ -25,6 +25,9 @@
 
     .views-exposed-widget {
       padding:0;
+      .form-type-select {
+        padding-top: 0;
+      }
     }
 
     #events-calendar-banner-header {
@@ -38,10 +41,11 @@
       padding-left:1.5em;
     }
 
-    input[type="text"] {
+    input[type="text"], select {
       border:2px solid $color-grey;
       border-radius:4px;
-      width:72px;
+      width:200px;
+      height: 40px;
 
       @media (max-width: $size-mobile-menu) {
         height: 45px;
@@ -69,6 +73,7 @@
       margin-top:0;
       text-transform:uppercase;
       font-weight:bold;
+      height: 40px;
 
       @media (max-width: $size-mobile-menu) {
         height:45px;
@@ -88,13 +93,14 @@
       @import "zen/background";
       $zen-column-count:7;
       $zen-gutter-width:10px;
-
-      border:1px solid white;
+      // transition: border .2s ease-in-out;
+      transition: background-color .2s ease-in-out;
+      border:3px solid white;
       margin-bottom:10px;
 
         &:hover {
-          border:1px solid $color-medium-blue;
-          @include box-shadow(0, 3px, 5px, $color-medium-blue);
+          border:3px solid $color-medium-blue;
+          // @include box-shadow(0, 3px, 5px, $color-medium-blue);
           background-color: rgba(98,181,229, 0.1);
         }
 
@@ -124,7 +130,7 @@
         img {
           border: 2px solid $color-medium-blue;
           width: 90%;
-
+          transition: background-color .2s ease-in-out;
 
           &:hover {
             border: 2px solid $color-orange;
