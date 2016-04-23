@@ -4,7 +4,7 @@
 .homepage-calendar-feed {
   margin-bottom: 0.5em;
 
-  h4, p, address, a, span {
+  h4, p, address, a {
     color: $color-text-main !important;
     font-style: normal;
     font-weight: normal;
@@ -18,7 +18,7 @@
   .homepage-calendar-feed-container {
     @include zen-grid-container();
     $zen-column-count:4;
-    $zen-gutter-width: 2px;
+    $zen-gutter-width: 1px;
 
     &:hover {
       background-color: rgba(98,181,229, 0.2);
@@ -31,6 +31,7 @@
 
     .homepage-calendar-feed-title-loc {
       @include zen-grid-item(3,1);
+      color: $color-dark-blue !important;
       font-weight:bold;
       line-height:1em;
 
@@ -54,8 +55,9 @@
 
     .homepage-calendar-feed-date {
       @include zen-grid-item(1,4);
-      padding-top:.5em;
+      padding-top:.5em !important;
       text-transform:uppercase;
+      word-wrap: normal;
       font-weight:bold;
       text-align:right;
   }
